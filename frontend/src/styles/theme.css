@@ -56,3 +56,10 @@
   --caption-font-size: 0.875rem; /* 14px */
   --caption-line-height: 1rem; /* 16px */
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--gradient-color); /* nền chính */
+}
