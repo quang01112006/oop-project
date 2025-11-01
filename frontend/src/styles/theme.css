@@ -1,0 +1,58 @@
+/*==============
+    COLORS
+================*/
+:root {
+  /*Primary colors*/
+  --p-100: hsl(186, 100%, 90%);
+  --p-300: hsl(188, 97%, 69%);
+  --p-500: hsl(190, 100%, 42%);
+  --p-700: hsl(194, 87%, 31%);
+  --p-900: hsl(198, 67%, 24%);
+
+  --n-100: hsl(210, 20%, 95%); /* nền sáng */
+  --n-300: hsl(210, 16%, 82%); /* border nhạt */
+  --n-500: hsl(210, 10%, 60%); /* icon, text phụ */
+  --n-700: hsl(210, 9%, 31%); /* text chính */
+  --n-900: hsl(210, 11%, 15%); /* tiêu đề, nhấn mạnh */
+
+  /* Gradients */
+  /* Gradient chính – dùng cho button, header */
+  --main-gradient-color: linear-gradient(to right, var(--p-300), var(--p-500));
+
+  /* Gradient phụ – dùng làm background nhẹ */
+  --gradient-color: linear-gradient(var(--n-100) 10%, var(--p-100));
+
+  /*================================= 
+        FONTS -  Sử dụng Scale 1.125
+    =================================*/
+  /* ====== H1 ====== */
+  /* Dùng cho: tiêu đề chính, banner, tên website */
+  --h1-font-size: 2rem; /* 32px */
+  --h1-line-height: 2.25rem; /* 36px */
+
+  /* ====== H2 ====== */
+  /* Dùng cho: tiêu đề mục lớn (vd: “Danh sách sách”, “Quản lý người dùng”) */
+  --h2-font-size: 1.6rem; /* 26px */
+  --h2-line-height: 2rem; /* 32px */
+
+  /* ====== H3 ====== */
+  /* Dùng cho: tiêu đề card, section nhỏ, popup, tiêu đề bảng */
+  --h3-font-size: 1.266rem; /* 20px */
+  --h3-line-height: 1.5rem; /* 24px */
+
+  /* ====== H4 ====== */
+  /* Dùng cho: label trong form, menu, tiêu đề cột, subheading nhỏ */
+  --h4-font-size: 1.125rem; /* 18px */
+  --h4-line-height: 1.5rem; /* 24px */
+
+  /* ====== Paragraph ====== */
+  /* Dùng cho: nội dung chính, mô tả, text hiển thị trong card hoặc chi tiết sách */
+  --p-font-size: 1rem; /* 16px */
+  --p-line-height: 1.5rem; /* 24px */
+  --p-letter-spacing: 0.025rem;
+
+  /* ====== Caption / Small text ====== */
+  /* Dùng cho: chú thích nhỏ, footer, text phụ (“©2025”, “By Admin”, “Còn hàng”) */
+  --caption-font-size: 0.875rem; /* 14px */
+  --caption-line-height: 1rem; /* 16px */
+}
