@@ -1,0 +1,27 @@
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--p-font-size);
+  color: var(--n-700);
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--n-300);
+}
+
+.customer-table th {
+  background-color: var(--n-100);
+  color: var(--n-900);
+  font-weight: 600;
+}
+
+.customer-table tr:hover {
+  background-color: var(--n-100);
+}
+
+.customer-table td {
+  background-color: var(--n-100);
+}
