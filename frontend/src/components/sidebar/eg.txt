@@ -1,0 +1,180 @@
+.sidebar-container {
+  width: 260px; /* Độ rộng "giãn" */
+  background: var(--n-900); /* Màu tối (ví dụ) */
+  color: var(--n-100); /* Chữ trắng */
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+
+  /* Ma thuật "Co/Giãn" */
+  transition: width 0.3s ease-in-out;
+}
+
+/* 3. Style cái Header (Logo + Nút) */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.logo-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--n-100);
+  /* Ma thuật "Ẩn/Hiện" */
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--n-300);
+  font-size: 1.8rem; /* Icon to */
+  cursor: pointer;
+  display: flex; /* Căn icon cho đẹp */
+  align-items: center;
+}
+.toggle-btn:hover {
+  color: var(--n-100);
+}
+
+/* 4. Style cái Menu Item (Link) */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--n-300);
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s;
+}
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--n-100);
+}
+/* Link "Active" (đang ở trang đó) */
+.menu-item.active {
+  background-color: var(--p-500); /* Màu "brand" của mày */
+  color: var(--n-100);
+  font-weight: 600;
+}
+.menu-icon {
+  font-size: 1.4rem;
+  min-width: 40px; /* (Rất quan trọng) "Neo" icon lại */
+}
+.menu-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  /* Ma thuật "Ẩn/Hiện" */
+  opacity: 1;
+  width: 100%;
+  white-space: nowrap; /* Ngăn chữ xuống dòng */
+  overflow: hidden; /* Ẩn chữ đi khi co */
+  transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+.divider {
+  border: none;
+  border-top: 1px solid var(--n-700);
+  margin: 1rem 0;
+}
+
+/* 5. 🪄 "MA THUẬT" KHI "CO" LẠI 🪄 */
+/* Mày chỉ cần 4 dòng này là "auto xịn" */
+
+/* Khi "cha" (.app-layout) có class "sidebar-collapsed"... */
+
+.app-layout.sidebar-collapsed .sidebar {
+  width: 80px; /* (1) Thu sidebar lại */
+}
+
+.app-layout.sidebar-collapsed .logo-text {
+  opacity: 0; /* (2) Ẩn logo (cho "mượt") */
+  width: 0;
+}
+
+.app-layout.sidebar-collapsed .menu-text {
+  opacity: 0; /* (3) Ẩn chữ (cho "mượt") */
+  width: 0;
+}
+
+.app-layout.sidebar-collapsed .content {
+  /* (4) "Nội dung" tự động lấn qua */
+  /* (Không cần làm gì, vì 'flex-grow: 1' nó tự lo) */
+}
+
+
+/* TRONG FILE Sidebar.css */
+
+/* 1. Style "Sườn" (App Layout) */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.content {
+  flex-grow: 1; /* "Nội dung" sẽ chiếm hết phần còn lại */
+  padding: 2rem;
+  background-color: #f4f7f6; /* Nền xám nhạt */
+  /* Ma thuật Transition cho "Nội dung" */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* 2. Style cái Sidebar (Lúc "Giãn" - Default) */
+.sidebar {
+  width: 260px; /* Độ rộng "giãn" */
+  background: var(--n-900); /* Màu tối (ví dụ) */
+  color: var(--n-100); /* Chữ trắng */
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  
+  /* Ma thuật "Co/Giãn" */
+  transition: width 0.3s ease-in-out;
+}
+
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--n-100);
+  /* Ma thuật "Ẩn/Hiện" */
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.menu-icon {
+  font-size: 1.4rem;
+  min-width: 40px; 
+}
+.menu-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  /* Ma thuật "Ẩn/Hiện" */
+  opacity: 1;
+  width: 100%;
+  white-space: nowrap; /* Ngăn chữ xuống dòng */
+  overflow: hidden; /* Ẩn chữ đi khi co */
+  transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+
+
+
+.app-layout.sidebar-collapsed .sidebar {
+  width: 80px; }
+
+.app-layout.sidebar-collapsed .logo-text {
+  opacity: 0; 
+  width: 0;
+}
+
+.app-layout.sidebar-collapsed .menu-text {
+  opacity: 0; /* 
+  width: 0;
+}
+
+.app-layout.sidebar-collapsed .content {
+  
+}
